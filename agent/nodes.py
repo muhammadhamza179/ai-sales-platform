@@ -4,6 +4,7 @@ import requests
 from dotenv import load_dotenv
 from tavily import TavilyClient
 from groq import Groq
+from langsmith import traceable
 from agent.state import AgentState
 from agent.prompts import (
     RESEARCH_SUMMARY_PROMPT,
@@ -65,6 +66,7 @@ def safe_json_parse(text: str) -> dict:
         return {"error": str(e), "raw": text[:200]}
 
 
+@traceable(name="research_node")
 def research_node(state: AgentState) -> AgentState:
     print(f"[research] Researching {state['company_name']}")
     errors = state.get("errors", [])
@@ -96,6 +98,7 @@ def research_node(state: AgentState) -> AgentState:
         return {**state, "research_data": {"sources_count": 0}, "errors": errors + [error_msg]}
 
 
+@traceable(name="linkedin_node")
 def linkedin_node(state: AgentState) -> AgentState:
     print(f"[linkedin] Analyzing LinkedIn data")
     errors = state.get("errors", [])
@@ -134,6 +137,7 @@ Specialities: {', '.join(company_data.get('specialities', [])[:5])}
         return {**state, "linkedin_data": {"skipped": True}, "errors": errors + [error_msg]}
 
 
+@traceable(name="vision_node")
 def vision_node(state: AgentState) -> AgentState:
     print(f"[vision] Analyzing screenshot")
     errors = state.get("errors", [])
@@ -152,6 +156,7 @@ def vision_node(state: AgentState) -> AgentState:
         return {**state, "visual_signals": {"skipped": True}, "errors": errors + [error_msg]}
 
 
+@traceable(name="persona_scoring_node")
 def persona_scoring_node(state: AgentState) -> AgentState:
     print(f"[persona_scoring] Calculating scores")
     errors = state.get("errors", [])
@@ -185,6 +190,7 @@ Company: {state['company_name']}
         return {**state, "persona": {}, "closing_probability": 0, "errors": errors + [error_msg]}
 
 
+@traceable(name="alignment_node")
 def alignment_node(state: AgentState) -> AgentState:
     print(f"[alignment] Finding company alignment")
     errors = state.get("errors", [])
@@ -210,6 +216,7 @@ Our Company Knowledge Base:
         return {**state, "company_alignment": {}, "errors": errors + [error_msg]}
 
 
+@traceable(name="outreach_node")
 def outreach_node(state: AgentState) -> AgentState:
     print(f"[outreach] Generating three message sequence")
     errors = state.get("errors", [])
@@ -240,6 +247,7 @@ Sentiment: {state.get('sentiment_score', 'neutral')}
         return {**state, "email_drafts": [], "errors": errors + [error_msg]}
 
 
+@traceable(name="crm_node")
 def crm_node(state: AgentState) -> AgentState:
     print(f"[crm] Writing to HubSpot")
     errors = state.get("errors", [])

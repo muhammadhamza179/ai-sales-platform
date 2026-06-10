@@ -1,0 +1,29 @@
+DATE: June 9 2026
+BASELINE EVAL RESULTS
+
+Companies tested: 5
+Persona accuracy: 3 out of 5 (60%)
+ICP accuracy: 2 out of 5 (40%)
+Average pipeline time: 15.22 seconds
+
+Companies where persona was WRONG:
+- Loom: predicted Director of Customer Success, expected Head of Sales
+- Retool: predicted IT Director, expected VP Engineering
+
+Companies where ICP was WRONG:
+- Notion: predicted medium, expected high (closing probability 60%)
+- Loom: predicted medium, expected high (closing probability 60%)
+- Retool: predicted medium, expected high (closing probability 60%)
+
+Companies where everything was CORRECT:
+- Linear: VP Engineering, high ICP
+- Deel: Head of HR, high ICP
+
+Notes on what I observed in LangSmith:
+- LinkedIn node skipped for all 5 companies (no Proxycurl API key)
+- 60% closing probability predicted for Notion, Loom, Retool
+- Loom misclassified: Tavily research focused on video communication not sales
+- Retool misclassified: internal tools mapped to IT Director instead of VP Engineering
+- Deel and Linear had clear industry signals so predictions were correct
+- No JSON parsing errors across any node
+- All 7 nodes completing successfully in every trace

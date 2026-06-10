@@ -1,0 +1,170 @@
+{
+    "metadata": {
+      "created": "2026-06-09",
+      "version": "1.0",
+      "description": "20 company eval dataset with ground truth labels",
+      "total_companies": 20
+    },
+    "companies": [
+      {
+        "company_name": "Notion",
+        "linkedin_url": "https://linkedin.com/company/notionhq",
+        "expected_persona": "Head of Operations",
+        "expected_icp": "high",
+        "research_summary_hint": "productivity software collaboration tool series c funding",
+        "notes": "Large SaaS, strong product market fit, clear ops buyer"
+      },
+      {
+        "company_name": "Linear",
+        "linkedin_url": "https://linkedin.com/company/linear-app",
+        "expected_persona": "VP Engineering",
+        "expected_icp": "high",
+        "research_summary_hint": "issue tracking software engineering teams series b",
+        "notes": "Developer tool, engineering buyer, high growth"
+      },
+      {
+        "company_name": "Loom",
+        "linkedin_url": "https://linkedin.com/company/loom-inc",
+        "expected_persona": "Head of Sales",
+        "expected_icp": "high",
+        "research_summary_hint": "video messaging sales communication tool acquired by Atlassian",
+        "notes": "Sales tool, strong sales buyer signal"
+      },
+      {
+        "company_name": "Retool",
+        "linkedin_url": "https://linkedin.com/company/tryretool",
+        "expected_persona": "VP Engineering",
+        "expected_icp": "high",
+        "research_summary_hint": "internal tools builder low code series c funding",
+        "notes": "Engineering buyer, internal tools space"
+      },
+      {
+        "company_name": "Deel",
+        "linkedin_url": "https://linkedin.com/company/deel-hq",
+        "expected_persona": "Head of HR",
+        "expected_icp": "high",
+        "research_summary_hint": "global payroll HR platform series d unicorn",
+        "notes": "HR buyer, global payroll, massive growth"
+      },
+      {
+        "company_name": "Webflow",
+        "linkedin_url": "https://linkedin.com/company/webflow-inc",
+        "expected_persona": "Head of Marketing",
+        "expected_icp": "high",
+        "research_summary_hint": "no code website builder marketing teams series c",
+        "notes": "Marketing buyer, design tool"
+      },
+      {
+        "company_name": "Figma",
+        "linkedin_url": "https://linkedin.com/company/figma",
+        "expected_persona": "Head of Design",
+        "expected_icp": "medium",
+        "research_summary_hint": "design collaboration tool acquired by Adobe blocked",
+        "notes": "Design buyer but Adobe acquisition complicates"
+      },
+      {
+        "company_name": "Airtable",
+        "linkedin_url": "https://linkedin.com/company/airtable",
+        "expected_persona": "Head of Operations",
+        "expected_icp": "high",
+        "research_summary_hint": "database spreadsheet hybrid no code platform series f",
+        "notes": "Ops buyer, workflow automation"
+      },
+      {
+        "company_name": "Zapier",
+        "linkedin_url": "https://linkedin.com/company/zapier",
+        "expected_persona": "Head of Operations",
+        "expected_icp": "high",
+        "research_summary_hint": "workflow automation integration platform bootstrapped profitable",
+        "notes": "Ops buyer, automation focus"
+      },
+      {
+        "company_name": "Intercom",
+        "linkedin_url": "https://linkedin.com/company/intercom",
+        "expected_persona": "Head of Customer Success",
+        "expected_icp": "high",
+        "research_summary_hint": "customer messaging platform support AI series d",
+        "notes": "CS buyer, customer support tool"
+      },
+      {
+        "company_name": "Mixpanel",
+        "linkedin_url": "https://linkedin.com/company/mixpanel-inc",
+        "expected_persona": "Head of Product",
+        "expected_icp": "medium",
+        "research_summary_hint": "product analytics platform series c slower growth",
+        "notes": "Product buyer but competitive market"
+      },
+      {
+        "company_name": "Amplitude",
+        "linkedin_url": "https://linkedin.com/company/amplitude-analytics",
+        "expected_persona": "Head of Product",
+        "expected_icp": "medium",
+        "research_summary_hint": "product analytics platform public company",
+        "notes": "Product buyer, public company harder to sell to"
+      },
+      {
+        "company_name": "Brex",
+        "linkedin_url": "https://linkedin.com/company/brex-hq",
+        "expected_persona": "CFO",
+        "expected_icp": "medium",
+        "research_summary_hint": "corporate card expense management fintech series d",
+        "notes": "Finance buyer, fintech"
+      },
+      {
+        "company_name": "Rippling",
+        "linkedin_url": "https://linkedin.com/company/rippling",
+        "expected_persona": "Head of HR",
+        "expected_icp": "high",
+        "research_summary_hint": "HR payroll IT management platform series e unicorn",
+        "notes": "HR buyer, fast growing, clear pain"
+      },
+      {
+        "company_name": "Asana",
+        "linkedin_url": "https://linkedin.com/company/asana",
+        "expected_persona": "Head of Operations",
+        "expected_icp": "medium",
+        "research_summary_hint": "project management platform public company",
+        "notes": "Ops buyer but mature public company"
+      },
+      {
+        "company_name": "Monday.com",
+        "linkedin_url": "https://linkedin.com/company/mondaydotcom",
+        "expected_persona": "Head of Sales",
+        "expected_icp": "high",
+        "research_summary_hint": "work operating system CRM sales project management public",
+        "notes": "Sales buyer, strong growth, clear use case"
+      },
+      {
+        "company_name": "Hubspot",
+        "linkedin_url": "https://linkedin.com/company/hubspot",
+        "expected_persona": "VP Sales",
+        "expected_icp": "medium",
+        "research_summary_hint": "CRM marketing sales platform public company large",
+        "notes": "Sales buyer but very large company, harder sell"
+      },
+      {
+        "company_name": "Calendly",
+        "linkedin_url": "https://linkedin.com/company/calendly",
+        "expected_persona": "Head of Sales",
+        "expected_icp": "high",
+        "research_summary_hint": "scheduling automation platform series b sales teams",
+        "notes": "Sales buyer, clear pain point around scheduling"
+      },
+      {
+        "company_name": "Lemon.io",
+        "linkedin_url": "https://linkedin.com/company/lemon-io",
+        "expected_persona": "Head of Engineering",
+        "expected_icp": "high",
+        "research_summary_hint": "developer marketplace freelance platform startup",
+        "notes": "Engineering buyer, developer marketplace"
+      },
+      {
+        "company_name": "Vercel",
+        "linkedin_url": "https://linkedin.com/company/vercel",
+        "expected_persona": "VP Engineering",
+        "expected_icp": "high",
+        "research_summary_hint": "frontend deployment platform developer tools series e",
+        "notes": "Engineering buyer, strong developer focus"
+      }
+    ]
+  }
