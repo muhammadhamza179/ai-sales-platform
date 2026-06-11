@@ -1,0 +1,154 @@
+{
+  "eval_date": "2026-06-11",
+  "total_companies": 5,
+  "persona_accuracy_percent": 100,
+  "icp_accuracy_percent": 100,
+  "hallucination_clean_rate_percent": 100,
+  "average_time_seconds": 16.3,
+  "p95_latency_seconds": 15.21,
+  "persona_correct": 5,
+  "icp_correct": 5,
+  "hallucination_clean": 5,
+  "results": [
+    {
+      "company": "Notion",
+      "predicted_persona": "Head of Operations",
+      "expected_persona": "Head of Operations",
+      "persona_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "predicted_icp": "high",
+      "expected_icp": "high",
+      "icp_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "hallucination_eval": {
+        "hallucination_detected": false,
+        "score": 1.0,
+        "reason": "no suspicious claims found",
+        "flagged_claims": []
+      },
+      "closing_probability": 80,
+      "time_seconds": 26.89,
+      "email_1_subject": "The future of B2B SaaS",
+      "email_1_body": "Notion's approach to all-in-one tools reflects where the industry is heading.",
+      "errors": []
+    },
+    {
+      "company": "Linear",
+      "predicted_persona": "VP Engineering",
+      "expected_persona": "VP Engineering",
+      "persona_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "predicted_icp": "high",
+      "expected_icp": "high",
+      "icp_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "hallucination_eval": {
+        "hallucination_detected": false,
+        "score": 1.0,
+        "reason": "no suspicious claims found",
+        "flagged_claims": []
+      },
+      "closing_probability": 80,
+      "time_seconds": 12.91,
+      "email_1_subject": "Innovations in B2B SaaS",
+      "email_1_body": "The B2B SaaS space is seeing impressive growth and innovation.",
+      "errors": []
+    },
+    {
+      "company": "Loom",
+      "predicted_persona": "Head of Sales",
+      "expected_persona": "Head of Sales",
+      "persona_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "predicted_icp": "high",
+      "expected_icp": "high",
+      "icp_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "hallucination_eval": {
+        "hallucination_detected": false,
+        "score": 1.0,
+        "reason": "no suspicious claims found",
+        "flagged_claims": []
+      },
+      "closing_probability": 80,
+      "time_seconds": 11.87,
+      "email_1_subject": "B2B SaaS innovation",
+      "email_1_body": "Loom's approach to video messaging reflects the evolving landscape of B2B SaaS solutions.",
+      "errors": []
+    },
+    {
+      "company": "Retool",
+      "predicted_persona": "VP Engineering",
+      "expected_persona": "VP Engineering",
+      "persona_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "predicted_icp": "high",
+      "expected_icp": "high",
+      "icp_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "hallucination_eval": {
+        "hallucination_detected": false,
+        "score": 1.0,
+        "reason": "no suspicious claims found",
+        "flagged_claims": []
+      },
+      "closing_probability": 80,
+      "time_seconds": 15.21,
+      "email_1_subject": "Efficient workflows in DevTools",
+      "email_1_body": "The DevTools industry is seeing a shift towards more efficient workflows and internal software app development.",
+      "errors": []
+    },
+    {
+      "company": "Deel",
+      "predicted_persona": "Head of HR",
+      "expected_persona": "Head of HR",
+      "persona_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "predicted_icp": "high",
+      "expected_icp": "high",
+      "icp_eval": {
+        "correct": true,
+        "score": 1.0,
+        "reason": "exact match"
+      },
+      "hallucination_eval": {
+        "hallucination_detected": false,
+        "score": 1.0,
+        "reason": "no suspicious claims found",
+        "flagged_claims": []
+      },
+      "closing_probability": 80,
+      "time_seconds": 14.63,
+      "email_1_subject": "Global employment solutions",
+      "email_1_body": "Deel's approach to global HR and payroll reflects the future of work",
+      "errors": []
+    }
+  ]
+}

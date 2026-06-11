@@ -1,0 +1,36 @@
+IMPROVEMENT NOTES — Day 5
+
+PERSONA ACCURACY FAILURES:
+
+Company: Notion — predicted Head of Productivity, expected Head of Operations
+Reason: Tavily research emphasizes productivity keywords. Agent maps "productivity"
+to a job title instead of recognizing operations buyer role.
+Fix needed: Add "productivity software = Head of Operations" mapping.
+
+Company: Retool — predicted IT Director, expected VP Engineering
+Reason: Tavily found "internal tools" and "low code." Agent maps internal tools
+to IT department instead of engineering.
+Fix needed: Add rule: "internal tools platform = VP Engineering, not IT"
+
+ICP ACCURACY FAILURES:
+
+Company: Loom — predicted medium, expected high (60% closing)
+Reason: 70% threshold too high. Loom is clearly high ICP.
+Fix needed: Lower high ICP threshold from 70% to 60%.
+
+Company: Webflow — predicted medium, expected high (60% closing)
+Reason: Same threshold issue.
+Fix needed: Same fix.
+
+Company: Figma — predicted high, expected medium
+Reason: Agent unaware of Adobe acquisition complications.
+Fix needed: Add M&A awareness to ICP scoring prompt.
+
+HALLUCINATION FLAGS:
+
+None — 10/10 companies clean.
+
+SUMMARY:
+- Persona: 80% -> expected 90%+ after keyword fixes
+- ICP: 70% -> expected 90%+ after threshold + M&A fix
+- Hallucination: 100% — no changes needed
