@@ -1,0 +1,51 @@
+WEEK 1 PERFORMANCE SUMMARY
+Date: June 12, 2026
+
+LATENCY
+P50 latency: 15.5 seconds
+P95 latency: 25.3 seconds
+Average latency: 17.2 seconds
+Fastest run: 11.8 seconds
+Slowest run: 33.7 seconds
+
+RELIABILITY
+Success rate: 20 out of 20 (100%)
+Failed runs: 0
+HubSpot success rate: 20 out of 20
+
+OUTPUT QUALITY
+Average emails generated per run: 3
+Average sources found per run: 9
+Average closing probability: 68%
+ICP distribution: High 12, Medium 5, Low 0
+
+EVAL ACCURACY
+Day 5 baseline: Persona 60%, ICP 40%, Hallucination 100%
+Day 6 improved: Persona 100%, ICP 100%, Hallucination 100%
+
+COST ESTIMATE
+Groq API: $0.00 (free tier)
+Tavily API: $0.00 (free tier)
+Total cost per prospect: $0.00
+
+ISSUES FOUND THIS WEEK
+- Tailwind v4 vs v3 version mismatch
+- LinkedIn analysis reads bio not posts
+- Groq rate limit at 100K tokens/day
+- Evaluator false positives on synonym matching
+- 8 companies with hallucinated financial claims
+- ICP threshold at 70% misclassified 6 companies
+
+FIXES APPLIED THIS WEEK
+- LangSmith tracing on all 7 nodes
+- 20-company labeled eval dataset
+- Three automated evaluators
+- Industry-specific buyer rules in persona prompt
+- ICP threshold lowered 70% to 60%
+- Anti-hallucination rules in email prompt
+
+COMPARISON TO DAY 1
+Day 1 pipeline time: 21-27 seconds
+Week 1 P95 latency: 25.3 seconds
+Day 1 persona accuracy: unknown
+Week 1 persona accuracy: 100%

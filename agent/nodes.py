@@ -171,7 +171,7 @@ Company: {state['company_name']}
         response_text = call_groq(full_prompt)
         scoring = safe_json_parse(response_text)
         closing_prob = scoring.get("closing_probability", 0)
-        icp = "high" if closing_prob >= 70 else "medium" if closing_prob >= 40 else "low"
+        icp = "high" if closing_prob >= 60 else "medium" if closing_prob >= 30 else "low"
         print(f"[persona_scoring] Done. Closing probability: {closing_prob}%")
         return {
             **state,

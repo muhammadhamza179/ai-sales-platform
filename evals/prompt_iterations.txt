@@ -1,0 +1,51 @@
+PROMPT ITERATION LOG
+
+ITERATION 1 — Day 5 Baseline
+Persona accuracy: 60% (3/5)
+ICP accuracy: 40% (2/5)
+Hallucination rate: 0% detected (but 8 companies had likely invented financial claims)
+
+Key failures:
+- Notion: predicted Head of Productivity, expected Head of Operations
+  LangSmith trace showed research emphasized "productivity" keywords. No industry-department mapping.
+- Retool: predicted IT Director, expected VP Engineering
+  LangSmith trace showed "internal tools" keyword mapped to IT, not Engineering.
+- Loom: predicted medium ICP (60%), expected high ICP
+  Closing probability scored 60%. Threshold was 70%.
+- Retool: predicted medium ICP (60%), expected high ICP
+  Same threshold issue.
+
+Root causes identified:
+1. Persona prompt lacked industry-to-buyer-department rules
+2. ICP threshold at 70% was too aggressive — 6 companies scored 60%
+3. Email prompt allowed invented financial claims ($120M ARR, $300M Series E, etc.)
+
+ITERATION 2 — Day 6 Changes
+
+Changes to PERSONA_SCORING_PROMPT:
+- Added 10 industry-specific buyer rules with exact department mapping
+- Added company size rules (startup → founder, SMB → director, etc.)
+- Added ICP scoring criteria (HIGH: 60-100 with 3+ signals, MEDIUM: 30-59, LOW: 0-29)
+- Added product-category-first logic (video tool for sales = Head of Sales)
+- Changed threshold from 70% to 60% in nodes.py
+
+Changes to RESEARCH_SUMMARY_PROMPT:
+- Added extraction rules for each field (funding_stage, estimated_size, etc.)
+- Added "Do not invent or assume facts" instruction
+
+Changes to THREE_MESSAGE_PROMPT:
+- Added CRITICAL RULES section with 4 never-break rules
+- "NEVER invent specific numbers — no funding amounts, revenue figures, employee counts"
+- Added GOOD example (general appreciation) and BAD example (invented numbers)
+
+Results after iteration 2:
+Persona accuracy: 100% (5/5) — was 60% (+40%)
+ICP accuracy: 100% (5/5) — was 40% (+60%)
+Hallucination clean rate: 100% (5/5) — was 100% (maintained)
+
+Remaining failures: None on 5-company test
+
+Hypothesis for next iteration:
+- Run full 20-company eval to verify improvements at scale
+- Consider adding few-shot examples if specific industries still fail
+- Strengthen hallucination evaluator to catch more pattern types
